@@ -1,4 +1,4 @@
-package social.gripp.oauth.utils.preauth.scopes;
+package social.gripp.oauth.utils.preauth.scopes.user;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 
@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-@PreAuthorize("#oauth2.hasScope('CREATE_USER')")
-public @interface CreateUserScope {
+@PreAuthorize("#oauth2.hasScope('modify_password')")
+public @interface ModifyPasswordScope {
 }
